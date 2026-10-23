@@ -1,0 +1,32 @@
+[package]
+name = "avloglog-rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["Jianshu Zhao <jianshuzhao@yahoo.com>"]
+license-file = "LICENSE"
+description = "Arithmetic Variable LogLog approximate distinct counting with packed base-56 registers"
+keywords = ["avloglog", "cardinality", "sketch", "distinct-count", "probabilistic"]
+categories = ["algorithms", "data-structures"]
+readme = "README.md"
+exclude = ["work/", "benchmarks/results/", "benchmarks/target/", "**/__pycache__/**"]
+
+[lib]
+name = "avloglog"
+
+[features]
+default = []
+serde = ["dep:serde", "dep:bincode"]
+
+[dependencies]
+bincode = { version = "1.3", optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+xxhash-rust = { version = "0.8", default-features = false, features = ["xxh3"] }
+
+[dev-dependencies]
+ahash = "0.8"
+komihash = "0.4.1"
+polymur-hash = "0.2.2"
+tab-hash = "0.3.0"
+t1ha = "0.1.2"
+wyhash = "0.6.0"
+serde_json = "1"
