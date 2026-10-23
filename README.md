@@ -3,9 +3,6 @@
 Standalone Rust implementation of **Arithmetic Variable LogLog (AVLL)** from
 [Bushnell (2026)](https://arxiv.org/abs/2608.12575), using the HLDLC estimator
 and the [BBTools reference class](https://github.com/bbushnell/BBTools/blob/efe4f7b0317d34488a344045383a69c9af908b8d/current/cardinality/ArithmeticVariableLogLog.java).
-The public input and persistence APIs follow
-[Jianshu Zhao's ExaLogLog crate](https://github.com/jianshu93/exaloglog).
-
 AVLL packs eleven base-56 registers into each `u64`. A shared rank floor permits
 early rejection of most hashes at high cardinality. HLDLC combines dynamic
 linear counting, state-based sampling, history counting, and a corrected
