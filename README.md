@@ -123,7 +123,3 @@ The calibration constants are unchanged. They are empirical; AVLL does not
 add a new finite-hash collision correction near the 64-bit ceiling. The
 benchmark reports behavior there rather than extending the paper's accuracy
 claim to that range.
-
-See [NOTICE](NOTICE), [LICENSE](LICENSE) and [LICENSE-EXALOGLOG](LICENSE-EXALOGLOG)
-for retained source attribution and license terms. This is a new standalone
-package; it does not modify the ExaLogLog implementation.
